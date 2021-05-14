@@ -2,8 +2,8 @@
 
 Fetch current crypto coin prices using Nomic open API
 
-# Usage
-rust-crypto-cli [COIN]
+## Usage
+`rust-crypto-cli [COIN]`
 
 ## Example
 ```
