@@ -11,6 +11,7 @@ mod app;
 mod fetch;
 
 use dotenv::dotenv;
+use fetch::PrettyPrintable;
 
 fn main() {
     dotenv().ok();
@@ -24,8 +25,6 @@ fn main() {
         println!("Invalid coin ID");
     } else {
         let payload = data.first().unwrap();
-        let price = payload.price.parse::<f32>().unwrap();
-
-        println!("Price of {} is currently: ${:.2}", &payload.id, price);
+        payload.as_pretty()
     }
 }
